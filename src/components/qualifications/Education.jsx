@@ -26,7 +26,7 @@ export default function Education() {
     <>
       <Grid
         style={{
-          backgroundColor: "white",
+          backgroundColor: "antiquewhite",
           padding: '10px',
           borderRadius: "20px",
           display: "flex",

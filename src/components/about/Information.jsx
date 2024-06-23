@@ -77,7 +77,7 @@ export default function Information() {
               borderRadius: "10px",
               ...centerContent,
               flexDirection: "column",
-              backgroundColor: "white",
+              backgroundColor: "antiquewhite",
               width: "max-content",
             }}
           >

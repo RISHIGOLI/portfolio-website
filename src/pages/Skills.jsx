@@ -111,7 +111,7 @@ export default function Skills() {
               flexDirection: "column",
               justifyContent: "flex-start",
               alignItems: "center",
-              backgroundColor: "white",
+              backgroundColor: "antiquewhite",
               borderRadius: "20px",
               padding: "20px 40px",
             }}
@@ -167,7 +167,7 @@ export default function Skills() {
               flexDirection: "column",
               justifyContent: "flex-start",
               alignItems: "center",
-              backgroundColor: "white",
+              backgroundColor: "antiquewhite",
               borderRadius: "20px",
               padding: "20px 40px",
             }}

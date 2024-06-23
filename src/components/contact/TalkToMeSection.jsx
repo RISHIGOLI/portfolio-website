@@ -86,7 +86,7 @@ export default function TalkToMeSection() {
                 width: "auto",
                 padding: "25px",
                 margin: "10px",
-                backgroundColor: "white",
+                backgroundColor: "antiquewhite",
                 borderRadius: "5px",
               }}
             >

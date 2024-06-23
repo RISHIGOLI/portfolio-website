@@ -117,7 +117,7 @@ export default function WriteMeYourProject() {
         style={{
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "white",
+          backgroundColor: "antiquewhite",
           padding: "30px",
           paddingBottom: "10px",
           borderRadius: "10px",

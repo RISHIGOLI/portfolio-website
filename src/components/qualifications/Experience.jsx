@@ -16,7 +16,7 @@ export default function Experience() {
     <>
       <Grid
         style={{
-          backgroundColor: "white",
+          backgroundColor: "antiquewhite",
           padding: "10px",
           borderRadius: "20px",
           height: "fit-content",
