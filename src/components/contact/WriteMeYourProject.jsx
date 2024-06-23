@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function WriteMeYourProject() {
-  const classes = useStyles()
+  const classes = useStyles();
   const [showForm, setShowForm] = useState(true);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
@@ -33,8 +33,8 @@ export default function WriteMeYourProject() {
   function handleClick() {
     console.log("clicked", formData);
     if (validateFormInputs()) {
-      setShowForm(false)
-      setShowLoader(true)
+      setShowForm(false);
+      setShowLoader(true);
       const serviceID = "service_wj441v6";
       const templateID = "template_l62xlpy";
       const userID = "89bB2bo1ZOAsV8YzT";
@@ -49,19 +49,36 @@ export default function WriteMeYourProject() {
             from_email: "",
             message: "",
           });
-          setErrorBody([])
-          setShowLoader(false)
-          setShowSuccessMessage(true)
+          setErrorBody([]);
+          setShowLoader(false);
+          setShowSuccessMessage(true);
         })
         .catch((err) => {
           console.log("FAILED...", err);
-          setShowLoader(false)
-          setShowFailureMessage(true)
+          setShowLoader(false);
+          setShowFailureMessage(true);
         });
     }
   }
 
   function handleChange(e) {
+    let newErrorBody = [...errorBody];
+    switch (e.target.name) {
+      case "from_name":
+        newErrorBody = errorBody.filter((error) => error !== "fromNameError");
+        setErrorBody(newErrorBody);
+        break;
+
+      case "from_email":
+        newErrorBody = errorBody.filter((error) => error !== "fromEmailError");
+        setErrorBody(newErrorBody);
+        break;
+
+      case "message":
+        newErrorBody = errorBody.filter((error) => error !== "messageError");
+        setErrorBody(newErrorBody);
+        break;
+    }
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -94,9 +111,7 @@ export default function WriteMeYourProject() {
       }}
     >
       {/* title */}
-      <Box className={classes.pageTitle}>
-        Write Me Your Project
-      </Box>
+      <Box className={classes.pageTitle}>Write Me Your Project</Box>
 
       <Grid
         style={{
