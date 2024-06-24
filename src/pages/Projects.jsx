@@ -4,7 +4,7 @@ import { centerContent } from "../styles/DynamicStyles";
 import Education from "../components/qualifications/Education";
 import Experience from "../components/qualifications/Experience";
 import MyButton from "../components/MyButton";
-import project1 from '../Assets/project1.jpg'
+import project1 from "../Assets/project1.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -27,11 +27,49 @@ const useStyles = makeStyles((theme) => ({
   subtitle: {
     color: theme.palette.colors.text.other,
   },
+  cardContainer: {
+    width: "300px",
+    border: "1px solid black",
+    margin: "5px",
+    borderRadius: "10px",
+    backgroundColor: "antiquewhite",
+    [theme.breakpoints.down(768)]:{
+      height: 'max-content',
+      width: '100%'
+    }
+  },
+  buttonsContainer:{
+    display: "flex", justifyContent: "space-between", padding: '0px 5px'
+  }
 }));
 
 export default function Contact() {
   const classes = useStyles();
   const projects = [
+    {
+      id: 1,
+      projectTitle: "Travel Website UI",
+      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
+      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
+    },
+    {
+      id: 1,
+      projectTitle: "Travel Website UI",
+      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
+      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
+    },
+    {
+      id: 1,
+      projectTitle: "Travel Website UI",
+      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
+      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
+    },
+    {
+      id: 1,
+      projectTitle: "Travel Website UI",
+      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
+      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
+    },
     {
       id: 1,
       projectTitle: "Travel Website UI",
@@ -55,7 +93,6 @@ export default function Contact() {
       {/* content */}
       <Grid
         style={{
-          minHeight: "300px",
           width: "100%",
           display: "flex",
           flexWrap: "wrap",
@@ -63,20 +100,10 @@ export default function Contact() {
         }}
       >
         {projects.map((project) => (
-          <Grid
-            key={project.id}
-            style={{
-              height: "300px",
-              width: "300px",
-              border: "1px solid black",
-              margin: "2px",
-              borderRadius: "10px",
-              backgroundColor: "antiquewhite",
-            }}
-          >
+          <Grid key={project.id} className={classes.cardContainer}>
             <Grid
               style={{
-                height: "100%",
+                // height: "100%",
                 display: "flex",
                 flexDirection: "column",
                 padding: "0px 5px",
@@ -92,10 +119,14 @@ export default function Contact() {
               >
                 {project.projectTitle}
               </Box>
-              <Grid style={{ height: "60%", border: '1px solid black' }}>
-                <img src={project1} alt="" style={{height: '100%', width: '100%', objectFit: 'cover'}}/>
+              <Grid style={{ height: "60%", border: "1px solid black" }}>
+                <img
+                  src={project1}
+                  alt=""
+                  style={{ height: "100%", width: "100%", objectFit: "cover" }}
+                />
               </Grid>
-              <Grid style={{ display: "flex", justifyContent: "space-around" }}>
+              <Grid className={classes.buttonsContainer}>
                 <MyButton
                   text="Github Link"
                   onClick={handleClick(project.projectGithubLink)}
