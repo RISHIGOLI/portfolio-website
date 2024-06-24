@@ -119,6 +119,7 @@ export default function BottomDrawer({ open, onClose }) {
         >
           {tabs.map((tab) => (
             <Grid
+              key={tab.id}
               item
               xs={4} // Adjusts the number of items per row on smaller screens
               style={{
@@ -126,7 +127,7 @@ export default function BottomDrawer({ open, onClose }) {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
-                cursor: 'pointer',
+                cursor: "pointer",
               }}
             >
               <Link
@@ -134,11 +135,18 @@ export default function BottomDrawer({ open, onClose }) {
                 spy={true}
                 smooth={true}
                 duration={500}
-                key={tab.id}
                 onClick={onClose}
               >
-                <Box style={{display: 'flex', justifyContent: 'center', fontSize: '35px'}}>{tab.tabIcon}</Box>
-                <Box style={{fontSize: '20px'}}>{tab.tabTitle}</Box>
+                <Box
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    fontSize: "35px",
+                  }}
+                >
+                  {tab.tabIcon}
+                </Box>
+                <Box style={{ fontSize: "20px" }}>{tab.tabTitle}</Box>
               </Link>
             </Grid>
           ))}
