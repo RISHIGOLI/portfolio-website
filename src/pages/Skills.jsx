@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.colors.text.primary,
     [theme.breakpoints.down(768)]: {
       marginTop: "0px",
-      margin: "5px",
+      margin: "0px",
     },
   },
   subtitle: {
@@ -45,10 +45,16 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px 25px",
     [theme.breakpoints.down(768)]: {
       width: "100%",
-      margin: '20px 0px',
+      margin: '15px 0px',
       padding: '0px'
     },
   },
+  titleContainer:{
+    ...centerContent, flexDirection: "column" ,
+    [theme.breakpoints.down(768)]:{
+      margin: '15px'
+    }
+  }
 }));
 
 export default function Skills() {
@@ -109,7 +115,7 @@ export default function Skills() {
   return (
     <Grid className={classes.mainContainer} id="skills">
       {/* title */}
-      <Grid style={{ ...centerContent, flexDirection: "column" }}>
+      <Grid className={classes.titleContainer}>
         <Box className={classes.title}>Skills</Box>
         <Box className={classes.subtitle}>My Technical Level</Box>
       </Grid>

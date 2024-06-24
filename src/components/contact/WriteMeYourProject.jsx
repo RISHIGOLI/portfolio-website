@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     margin: "10px",
     color: theme.palette.colors.text.primary,
+    [theme.breakpoints.down(768)]: {
+      margin: "15px",
+    },
   },
 }));
 

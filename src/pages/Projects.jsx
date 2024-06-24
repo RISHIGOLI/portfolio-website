@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     display: "flex",
     padding: "0% 13%",
+    [theme.breakpoints.down(768)]:{
+      marginTop: '0px'
+    }
   },
   title: {
     fontWeight: "bold",
@@ -23,6 +26,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "0px",
     ...centerContent,
     color: theme.palette.colors.text.primary,
+    [theme.breakpoints.down(768)]:{
+      margin: '0px',
+      marginTop: '0px'
+    }
   },
   subtitle: {
     color: theme.palette.colors.text.other,
@@ -40,6 +47,12 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonsContainer:{
     display: "flex", justifyContent: "space-between", padding: '0px 5px'
+  },
+  titleContainer:{
+    ...centerContent, flexDirection: "column",
+    [theme.breakpoints.down(768)]:{
+      margin: '15px'
+    }
   }
 }));
 
@@ -85,7 +98,7 @@ export default function Contact() {
   return (
     <Grid id="projects" className={classes.mainContainer}>
       {/* title */}
-      <Grid style={{ ...centerContent, flexDirection: "column" }}>
+      <Grid className={classes.titleContainer}>
         <Box className={classes.title}>Projects</Box>
         <Box className={classes.subtitle}>Browse My Recents</Box>
       </Grid>

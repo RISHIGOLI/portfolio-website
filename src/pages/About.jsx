@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.colors.text.primary,
     [theme.breakpoints.down(768)]: {
       marginTop: "0px",
+      margin: '0px'
     },
   },
   subtitle: {
@@ -55,6 +56,12 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
   },
+  titleContainer:{
+    ...centerContent, flexDirection: "column",
+    [theme.breakpoints.down(768)]:{
+      margin: '15px'
+    }
+  }
 }));
 
 function About() {
@@ -62,7 +69,7 @@ function About() {
   return (
     <Grid className={classes.mainContainer} id="about">
       {/* title */}
-      <Grid style={{ ...centerContent, flexDirection: "column" }}>
+      <Grid className={classes.titleContainer}>
         <Box className={classes.title}>About Me</Box>
         <Box className={classes.subtitle}>My Introduction</Box>
       </Grid>

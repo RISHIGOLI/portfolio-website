@@ -8,12 +8,23 @@ import WriteMeYourProject from "../components/contact/WriteMeYourProject";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    // minHeight: "calc(100vh - 80px)",
-    // marginTop: "80px",
     padding: "0% 13%",
     ...centerContent,
-    width: "-webkit-fill-available",
   },
+  contentContainer: {
+    display: "flex",
+    justifyContent: "space-around",
+    width: "100%",
+    [theme.breakpoints.down(768)]:{
+      flexDirection: 'column'
+    }
+  },
+  content:{
+    width: "45%",
+    [theme.breakpoints.down(768)]:{
+      width: '100%'
+    }
+  }
 }));
 
 export default function Projects() {
@@ -21,17 +32,11 @@ export default function Projects() {
 
   return (
     <Grid id="contact" className={classes.mainContainer}>
-      <Grid
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          width: "100%",
-        }}
-      >
-        <Grid style={{ height: "500px", width: "45%" }}>
+      <Grid className={classes.contentContainer}>
+        <Grid className={classes.content}>
           <TalkToMeSection />
         </Grid>
-        <Grid style={{ height: "500px", width: "45%" }}>
+        <Grid className={classes.content}>
           <WriteMeYourProject />
         </Grid>
       </Grid>

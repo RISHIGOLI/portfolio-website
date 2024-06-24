@@ -34,6 +34,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     margin: "10px",
     color: theme.palette.colors.text.primary,
+    [theme.breakpoints.down(768)]:{
+      margin: '15px'
+    }
+  },
+  card: {
+    display: "flex",
+    flexDirection: "column",
+    width: "max-content",
+    [theme.breakpoints.down(768)]: {
+      width: "100%",
+    },
   },
 }));
 
@@ -68,13 +79,7 @@ export default function TalkToMeSection() {
       <Grid
         style={{ width: "100%", display: "flex", justifyContent: "center" }}
       >
-        <Grid
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "max-content",
-          }}
-        >
+        <Grid className={classes.card}>
           {communicationTypes.map((type, index) => (
             <Grid
               key={type.id}

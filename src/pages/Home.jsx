@@ -24,10 +24,20 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileContainer: {
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
     [theme.breakpoints.up(768)]: {
       display: "none",
-      flexDirection: "column",
     },
+  },
+
+  content: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    margin: "40px 0px",
+    // marginTop: '40px'
   },
 }));
 
@@ -80,13 +90,7 @@ function Home() {
 
       {/* mobile container */}
       <Grid className={classes.mobileContainer}>
-        <Grid
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            margin: "80px 0px",
-          }}
-        >
+        <Grid className={classes.content}>
           {/* left icons */}
           <Grid
             style={{

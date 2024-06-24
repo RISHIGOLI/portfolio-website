@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "3% 25% 3% 25%",
     ...centerContent,
     border: "3px solid #bf7272",
+    [theme.breakpoints.down(768)]:{
+      height: '100%'
+    }
   },
 }));
 

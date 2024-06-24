@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     [theme.breakpoints.down(768)]:{
-      margin: '20px 0px'
+      margin: '15px 0px'
     }
   },
 }));

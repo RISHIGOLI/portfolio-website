@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.colors.text.primary,
     [theme.breakpoints.down(768)]: {
       marginTop: "0px",
+      margin: '0px'
     },
   },
   subtitle: {
@@ -49,6 +50,12 @@ const useStyles = makeStyles((theme) => ({
       flexDirection: 'column'
     }
   },
+  titleContainer:{
+    ...centerContent, flexDirection: "column", margin: '10px',
+    [theme.breakpoints.down(768)]:{
+      margin: '15px'
+    }
+  }
 }));
 
 export default function Qualification() {
@@ -57,7 +64,7 @@ export default function Qualification() {
   return (
     <Grid id="qualifications" className={classes.mainContainer}>
       {/* title */}
-      <Grid style={{ ...centerContent, flexDirection: "column", margin: '10px' }}>
+      <Grid className={classes.titleContainer}>
         <Box className={classes.title}>Qualification</Box>
         <Box className={classes.subtitle}>My Personal Journey</Box>
       </Grid>
