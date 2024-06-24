@@ -44,7 +44,7 @@ function App() {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <div className={isDarkMode ? classes.container1 : classes.container2}>
         <Header changeTheme={handleChangeTheme} darkMode={isDarkMode} />
-        <BottomNavBar />
+        <BottomNavBar changeTheme={handleChangeTheme} darkMode={isDarkMode}/>
         <Home />
         <About />
         <Skills />

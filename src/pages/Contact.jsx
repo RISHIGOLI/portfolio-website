@@ -9,10 +9,10 @@ import WriteMeYourProject from "../components/contact/WriteMeYourProject";
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     padding: "0% 13%",
-    marginBottom: '80px',
     ...centerContent,
     [theme.breakpoints.down(768)]:{
-      padding: '0% 5%'
+      padding: '0% 5%',
+      marginBottom: '80px',
     }
   },
   contentContainer: {

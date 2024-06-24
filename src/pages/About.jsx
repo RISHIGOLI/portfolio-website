@@ -27,7 +27,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "0% 13%",
     [theme.breakpoints.down(768)]: {
-      height: "auto",
+      height: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
       marginTop: "0px",
       padding: '0% 5%'
     },
