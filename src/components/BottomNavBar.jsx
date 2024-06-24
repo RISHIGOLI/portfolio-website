@@ -1,23 +1,16 @@
 import React, { useState } from "react";
 import { Grid, Box, makeStyles } from "@material-ui/core";
 import BottomDrawer from "./BottomDrawer";
+import { TbGridDots } from "react-icons/tb";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    height: "50px",
-    width: '100%',
-    padding: '5px 10px',
+    width: "100%",
+    height: "100px",
     position: "fixed",
-    backgroundColor: "white",
-    zIndex: 1000, // Ensure it's above most elements but lower than Drawer
-    bottom: '-5px',
-    display: "flex",
     left: 0,
-    justifyContent: "space-between",
-    alignItems: "center",
-    [theme.breakpoints.up(768)]: {
-      display: "none",
-    },
+    bottom: 0,
+    zIndex: 100,
   },
 }));
 
@@ -28,8 +21,20 @@ export default function BottomNavBar() {
   return (
     <>
       <Grid className={classes.container}>
-        <Box>Rushikesh</Box>
-        <Box onClick={() => setOpenBottomDrawer(true)}>Icon</Box>
+        <Grid
+          style={{
+            height: "100%",
+            width: "auto",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            backgroundColor: "white",
+            padding: '0px 15px'
+          }}
+        >
+          <Box style={{fontSize: '20px'}}>Rushikesh</Box>
+          <Box onClick={() => setOpenBottomDrawer(true)} style={{cursor: 'pointer', fontSize: '35px'}}><TbGridDots/></Box>
+        </Grid>
       </Grid>
 
       {openBottomDrawer && (

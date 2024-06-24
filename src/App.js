@@ -15,13 +15,19 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex', flexDirection: 'column',
     // backgroundColor: '#edf1b4',
     background: "linear-gradient(90deg, #160808, #978383)",
-    paddingBottom: '50px'
+    paddingBottom: '50px',
+    [theme.breakpoints.down(768)]: {
+      overflow: 'auto'
+    }
   },
   container2: {
     display: 'flex', flexDirection: 'column',
     // backgroundColor: '#edf1b4',
     background: "linear-gradient(90deg, #ff6b6b, #ebe364)",
-    paddingBottom: '50px'
+    paddingBottom: '50px',
+    [theme.breakpoints.down(768)]: {
+      overflow: 'auto'
+    }
   }
 }))
 
@@ -38,7 +44,7 @@ function App() {
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <div className={isDarkMode ? classes.container1 : classes.container2}>
         <Header changeTheme={handleChangeTheme} darkMode={isDarkMode} />
-        <BottomNavBar/>
+        <BottomNavBar />
         <Home />
         <About />
         <Skills />
