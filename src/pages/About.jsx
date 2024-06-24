@@ -9,28 +9,58 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "30px",
     margin: "10px",
     marginTop: "80px",
-    color: theme.palette.colors.text.primary
+    color: theme.palette.colors.text.primary,
+    [theme.breakpoints.down(768)]: {
+      marginTop: "0px",
+    },
   },
-  subtitle:{
-    color: theme.palette.colors.text.other
-  }
+  subtitle: {
+    color: theme.palette.colors.text.other,
+  },
+  mainContainer: {
+    height: "calc(100vh - 80px)",
+    marginTop: "80px",
+    flexDirection: "column",
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    padding: "0% 13%",
+    [theme.breakpoints.down(768)]: {
+      height: "auto",
+      marginTop: "0px",
+    },
+  },
+
+  photoAndInfoContainer: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-around",
+    [theme.breakpoints.down(768)]: {
+      flexDirection: "column",
+    },
+  },
+  photo: {
+    height: "100%",
+    width: "50%",
+    ...centerContent,
+    [theme.breakpoints.down(768)]: {
+      width: "100%",
+    },
+  },
+  info: {
+    height: "100%",
+    width: "50%",
+    ...centerContent,
+    [theme.breakpoints.down(768)]: {
+      width: "100%",
+    },
+  },
 }));
 
 function About() {
-  const classes = useStyles()
+  const classes = useStyles();
   return (
-    <Grid
-      style={{
-        height: "calc(100vh - 80px)",
-        marginTop: "80px",
-        flexDirection: "column",
-        display: "flex",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        padding: "0% 13%",
-      }}
-      id="about"
-    >
+    <Grid className={classes.mainContainer} id="about">
       {/* title */}
       <Grid style={{ ...centerContent, flexDirection: "column" }}>
         <Box className={classes.title}>About Me</Box>
@@ -38,21 +68,9 @@ function About() {
       </Grid>
 
       {/* photo and info container */}
-      <Grid
-        style={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-around",
-        }}
-      >
+      <Grid className={classes.photoAndInfoContainer}>
         {/* photo */}
-        <Grid
-          style={{
-            height: "100%",
-            width: "50%",
-            ...centerContent,
-          }}
-        >
+        <Grid className={classes.photo}>
           <Grid
             style={{
               height: "75%",
@@ -74,13 +92,7 @@ function About() {
         </Grid>
 
         {/* info */}
-        <Grid
-          style={{
-            height: "100%",
-            width: "50%",
-            ...centerContent,
-          }}
-        >
+        <Grid className={classes.info}>
           <Information />
         </Grid>
       </Grid>

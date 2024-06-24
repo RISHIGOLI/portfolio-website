@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
   mobileContainer: {
     [theme.breakpoints.up(768)]: {
-      display: "flex",
+      display: "none",
       flexDirection: "column",
     },
   },

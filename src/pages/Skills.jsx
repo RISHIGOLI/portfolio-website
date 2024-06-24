@@ -9,12 +9,46 @@ const useStyles = makeStyles((theme) => ({
     margin: "10px",
     ...centerContent,
     marginTop: "80px",
-    marginBottom: "0px",
-    color: theme.palette.colors.text.primary
+    color: theme.palette.colors.text.primary,
+    [theme.breakpoints.down(768)]: {
+      marginTop: "0px",
+      margin: "5px",
+    },
   },
-  subtitle:{
-    color: theme.palette.colors.text.other
-  }
+  subtitle: {
+    color: theme.palette.colors.text.other,
+  },
+  mainContainer: {
+    height: "calc(100vh - 80px)",
+    marginTop: "90px",
+    flexDirection: "column",
+    display: "flex",
+    justifyContent: "space-evenly",
+    padding: "0% 13%",
+    [theme.breakpoints.down(768)]: {
+      height: "auto",
+      marginTop: "0px",
+    },
+  },
+  contentContainer: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    width: "100%",
+    maxHeight: "300px",
+    [theme.breakpoints.down(768)]: {
+      flexDirection: "column",
+      maxHeight: 'max-content'
+    },
+  },
+  content: {
+    width: "50%",
+    padding: "0px 25px",
+    [theme.breakpoints.down(768)]: {
+      width: "100%",
+      margin: '20px 0px',
+      padding: '0px'
+    },
+  },
 }));
 
 export default function Skills() {
@@ -73,17 +107,7 @@ export default function Skills() {
     },
   ];
   return (
-    <Grid
-      style={{
-        height: "calc(100vh - 80px)",
-        marginTop: "90px",
-        flexDirection: "column",
-        display: "flex",
-        justifyContent: "space-evenly",
-        padding: "0% 13%",
-      }}
-      id="skills"
-    >
+    <Grid className={classes.mainContainer} id="skills">
       {/* title */}
       <Grid style={{ ...centerContent, flexDirection: "column" }}>
         <Box className={classes.title}>Skills</Box>
@@ -91,20 +115,8 @@ export default function Skills() {
       </Grid>
 
       {/* content container */}
-      <Grid
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          width: "100%",
-          maxHeight: "300px",
-        }}
-      >
-        <Grid
-          style={{
-            width: "50%",
-            padding: "0px 25px",
-          }}
-        >
+      <Grid className={classes.contentContainer}>
+        <Grid className={classes.content}>
           <Grid
             style={{
               display: "flex",
@@ -155,12 +167,7 @@ export default function Skills() {
           </Grid>
         </Grid>
 
-        <Grid
-          style={{
-            width: "50%",
-            padding: "0px 25px",
-          }}
-        >
+        <Grid className={classes.content}>
           <Grid
             style={{
               display: "flex",

@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-evenly",
     padding: "0% 13%",
+    [theme.breakpoints.down(768)]: {
+      marginTop: "0px",
+      minHeight: "max-content",
+    },
   },
   button: {
     textTransform: "none",
@@ -29,11 +33,22 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "80px",
     marginBottom: "0px",
     ...centerContent,
-    color: theme.palette.colors.text.primary
+    color: theme.palette.colors.text.primary,
+    [theme.breakpoints.down(768)]: {
+      marginTop: "0px",
+    },
   },
-  subtitle:{
-    color: theme.palette.colors.text.other
-  }
+  subtitle: {
+    color: theme.palette.colors.text.other,
+  },
+  contentContainer: {
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-around",
+    [theme.breakpoints.down(768)]:{
+      flexDirection: 'column'
+    }
+  },
 }));
 
 export default function Qualification() {
@@ -42,21 +57,14 @@ export default function Qualification() {
   return (
     <Grid id="qualifications" className={classes.mainContainer}>
       {/* title */}
-      <Grid style={{ ...centerContent, flexDirection: "column" }}>
+      <Grid style={{ ...centerContent, flexDirection: "column", margin: '10px' }}>
         <Box className={classes.title}>Qualification</Box>
         <Box className={classes.subtitle}>My Personal Journey</Box>
       </Grid>
 
-      {/* content container */}
       <Grid style={{ ...centerContent }}>
-        <Grid
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-around",
-            // flexDirection: "column",
-          }}
-        >
+        {/* content container */}
+        <Grid className={classes.contentContainer}>
           {/* titles */}
           {/* <Grid style={{ display: "flex", width: "100%", margin: "10px" }}>
             <Grid

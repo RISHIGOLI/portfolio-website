@@ -1,6 +1,17 @@
 import { makeStyles, Grid, Box } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  container: {
+    backgroundColor: "antiquewhite",
+    padding: "10px",
+    borderRadius: "20px",
+    display: "flex",
+    flexDirection: "column",
+    [theme.breakpoints.down(768)]:{
+      margin: '20px 0px'
+    }
+  },
+}));
 
 export default function Education() {
   const classes = useStyles();
@@ -24,16 +35,16 @@ export default function Education() {
   ];
   return (
     <>
-      <Grid
-        style={{
-          backgroundColor: "antiquewhite",
-          padding: '10px',
-          borderRadius: "20px",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Box style={{ marginBottom: "10px", fontSize: "20px", fontWeight: "bold", display: 'flex', justifyContent: 'center' }}>
+      <Grid className={classes.container}>
+        <Box
+          style={{
+            marginBottom: "10px",
+            fontSize: "20px",
+            fontWeight: "bold",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           Education
         </Box>
         <Grid style={{ width: "100%" }}>
