@@ -42,7 +42,7 @@ export default function BottomDrawer({ open, onClose }) {
       id: "1",
       tabIcon: <CiHome />,
       tabTitle: "Home",
-      to: "home",
+      to: "homeForMobileView",
     },
     {
       id: "2",

@@ -89,7 +89,7 @@ function Home() {
       </Grid>
 
       {/* mobile container */}
-      <Grid className={classes.mobileContainer}>
+      <Grid className={classes.mobileContainer} id="homeForMobileView">
         <Grid className={classes.content}>
           {/* left icons */}
           <Grid
