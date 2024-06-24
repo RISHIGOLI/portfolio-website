@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(768)]: {
       marginTop: "0px",
       minHeight: "max-content",
+      padding: '0% 5%'
     },
   },
   button: {

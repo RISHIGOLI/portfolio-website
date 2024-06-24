@@ -15,7 +15,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     padding: "0% 13%",
     [theme.breakpoints.down(768)]:{
-      marginTop: '0px'
+      marginTop: '0px',
+      padding: '0% 5%'
     }
   },
   title: {

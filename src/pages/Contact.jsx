@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "0% 13%",
     marginBottom: '80px',
     ...centerContent,
+    [theme.breakpoints.down(768)]:{
+      padding: '0% 5%'
+    }
   },
   contentContainer: {
     display: "flex",
