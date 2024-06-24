@@ -57,6 +57,12 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(768)]:{
       margin: '15px'
     }
+  },
+  skills:{
+    width: "100%", flexWrap: "wrap", display: "flex",
+    [theme.breakpoints.down(768)]:{
+      justifyContent: 'flex-end'
+    }
   }
 }));
 
@@ -142,7 +148,7 @@ export default function Skills() {
             >
               Frontend Development
             </Box>
-            <Grid style={{ width: "100%", flexWrap: "wrap", display: "flex" }}>
+            <Grid className={classes.skills}>
               {frontendSkills.map((skill) => (
                 <Grid
                   style={{
@@ -193,7 +199,7 @@ export default function Skills() {
             >
               Backend Development
             </Box>
-            <Grid style={{ width: "100%", flexWrap: "wrap", display: "flex" }}>
+            <Grid className={classes.skills}>
               {backendSkills.map((skill) => (
                 <Grid
                   style={{

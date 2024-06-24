@@ -1,4 +1,5 @@
 import { makeStyles, Grid, Box } from "@material-ui/core";
+import { centerContent } from "../../styles/DynamicStyles";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -12,6 +13,13 @@ const useStyles = makeStyles((theme) => ({
       margin: '15px 0px'
     }
   },
+  content:{
+    width: '100%',
+    [theme.breakpoints.down(768)]:{
+      ...centerContent,
+      flexDirection: 'column'
+    }
+  }
 }));
 
 export default function Experience() {
@@ -38,7 +46,7 @@ export default function Experience() {
         >
           Experience
         </Box>
-        <Grid style={{ width: "100%" }}>
+        <Grid className={classes.content}>
           {works.map((work, index) => (
             <Grid
               style={{
