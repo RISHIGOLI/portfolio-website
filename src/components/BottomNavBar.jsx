@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     bottom: 0,
     zIndex: 100,
+    [theme.breakpoints.up(768)]:{
+      display: 'none'
+    }
   },
 }));
 
