@@ -16,11 +16,18 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "40px",
     margin: "10px 0px",
     color: theme.palette.colors.text.primary,
+    [theme.breakpoints.down(768)]:{
+      fontSize: '30px',
+      display: 'flex',
+      justifyContent: 'center'
+    }
   },
   designation: {
     fontWeight: 500,
     fontSize: "16px",
     color: theme.palette.colors.text.primary,
+    display: 'flex',
+    justifyContent: 'center'
   },
   button: {
     backgroundColor: theme.palette.colors.button.background.primary,
@@ -31,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
   information: {
     color: theme.palette.colors.text.other,
     margin: "10px 0px",
+    textAlign: "justify",
   },
 }));
 
@@ -39,9 +47,7 @@ function Information() {
   return (
     <Grid className={classes.mainContainer}>
       <Box className={classes.name}>Rushikesh Goli</Box>
-      <Box className={classes.designation}>
-        --------------- Full Stack Developer ---------------
-      </Box>
+      <Box className={classes.designation}>Full Stack Developer</Box>
       <Box className={classes.information}>
         I am a versatile Full Stack Developer with extensive experience in
         building robust web applications and backend services. My journey in the
