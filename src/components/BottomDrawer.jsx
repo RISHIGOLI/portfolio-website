@@ -67,13 +67,13 @@ export default function BottomDrawer({ open, onClose }) {
     {
       id: "4",
       tabIcon: <MdOutlineHomeRepairService />,
-      tabTitle: "Services",
+      tabTitle: "Qualifications",
       to: "qualifications",
     },
     {
       id: "5",
       tabIcon: <HiOutlinePhotograph />,
-      tabTitle: "Portfolio",
+      tabTitle: "Projects",
       to: "projects",
     },
     {

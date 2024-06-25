@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     padding: "0% 13%",
     [theme.breakpoints.down(768)]:{
       marginTop: '0px',
-      padding: '0% 5%'
+      padding: '0% 5%',
+      justifyContent: 'center'
     }
   },
   title: {
@@ -67,34 +68,10 @@ export default function Contact() {
       projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
       projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
     },
-    {
-      id: 1,
-      projectTitle: "Travel Website UI",
-      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
-      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
-    },
-    {
-      id: 1,
-      projectTitle: "Travel Website UI",
-      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
-      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
-    },
-    {
-      id: 1,
-      projectTitle: "Travel Website UI",
-      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
-      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
-    },
-    {
-      id: 1,
-      projectTitle: "Travel Website UI",
-      projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
-      projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
-    },
   ];
 
   function handleClick(url) {
-    // window.open(url, "_blank");
+    window.open(url, "_blank");
   }
 
   return (
@@ -144,11 +121,11 @@ export default function Contact() {
               <Grid className={classes.buttonsContainer}>
                 <MyButton
                   text="Github Link"
-                  onClick={handleClick(project.projectGithubLink)}
+                  onClick={()=>handleClick(project.projectGithubLink)}
                 />
                 <MyButton
                   text="Live Demo"
-                  onClick={handleClick(project.projectDemoLink)}
+                  onClick={()=>handleClick(project.projectDemoLink)}
                 />
               </Grid>
             </Grid>
