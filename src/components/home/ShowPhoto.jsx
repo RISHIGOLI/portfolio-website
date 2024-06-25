@@ -25,6 +25,7 @@ function ShowPhoto() {
           height: "100%",
           width: "100%",
           borderRadius: "inherit",
+          boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
         }}
       />
     </Grid>

@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "space-around",
+    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)',
     [theme.breakpoints.down(768)]: {
       flexDirection: "column",
     },

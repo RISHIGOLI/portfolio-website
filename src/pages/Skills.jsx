@@ -141,6 +141,7 @@ export default function Skills() {
               backgroundColor: "antiquewhite",
               borderRadius: "20px",
               padding: "20px 40px",
+              boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
             }}
           >
             <Box
@@ -192,6 +193,7 @@ export default function Skills() {
               backgroundColor: "antiquewhite",
               borderRadius: "20px",
               padding: "20px 40px",
+              boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
             }}
           >
             <Box

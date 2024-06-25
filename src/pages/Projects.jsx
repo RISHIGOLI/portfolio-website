@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "5px",
     borderRadius: "10px",
     backgroundColor: "antiquewhite",
+    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)',
     [theme.breakpoints.down(768)]:{
       height: 'max-content',
       width: '100%'

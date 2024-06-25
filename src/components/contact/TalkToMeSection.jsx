@@ -93,6 +93,7 @@ export default function TalkToMeSection() {
                 margin: "10px",
                 backgroundColor: "antiquewhite",
                 borderRadius: "5px",
+                boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
               }}
             >
               <Box className={classes.icon}>{type.typeIcon}</Box>

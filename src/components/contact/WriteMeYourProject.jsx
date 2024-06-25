@@ -126,6 +126,7 @@ export default function WriteMeYourProject() {
           borderRadius: "10px",
           margin: "10px",
           minHeight: "400px",
+          boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
         }}
       >
         {showForm && (

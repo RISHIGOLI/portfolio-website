@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "25px 0px",
     scale: 2,
     color: theme.palette.colors.text.primary,
+    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
   },
   webContainer: {
     display: "flex",

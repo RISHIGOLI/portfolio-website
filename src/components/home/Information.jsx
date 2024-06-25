@@ -6,6 +6,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "0px 100px",
+    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
   },
   name: {
     fontWeight: "bold",
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   designation: {
     fontWeight: 500,
     fontSize: "16px",
-    color: theme.palette.colors.text.secondary,
+    color: theme.palette.colors.text.primary,
   },
   button: {
     backgroundColor: theme.palette.colors.button.background.primary,

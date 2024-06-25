@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "20px",
     display: "flex",
     flexDirection: "column",
+    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)',
     [theme.breakpoints.down(768)]:{
       margin: '15px 0px'
     }
