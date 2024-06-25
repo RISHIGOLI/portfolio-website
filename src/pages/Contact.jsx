@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(768)]:{
       padding: '0% 5%',
       marginBottom: '80px',
-      height: 'calc(100vh - 100px)'
     }
   },
   contentContainer: {
