@@ -6,7 +6,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     padding: "0px 100px",
-    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
+    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)',
+    [theme.breakpoints.down(768)]:{
+      width: '50%'
+    }
   },
   name: {
     fontWeight: "bold",
