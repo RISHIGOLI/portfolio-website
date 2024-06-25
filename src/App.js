@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   container1: {
     display: 'flex', flexDirection: 'column',
     // backgroundColor: '#edf1b4',
-    background: "linear-gradient(90deg, #160808, #978383)",
+    background: "linear-gradient(90deg, #837272, #a37272)",
     paddingBottom: '50px',
     [theme.breakpoints.down(768)]: {
       overflow: 'auto'

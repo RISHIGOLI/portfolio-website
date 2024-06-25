@@ -41,5 +41,5 @@ export const darkPalette = {
             }
         }
     },
-    background: "linear-gradient(90deg, #160808, #978383)"
+    background: "linear-gradient(90deg, #837272, #a37272)"
 }
