@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "0px",
       minHeight: "max-content",
       padding: '0% 5%',
-      height: 'calc(100vh - 100px)',
+      height: 'calc(100vh - 75px)',
       display: 'flex',
       justifyContent: 'center'
     },

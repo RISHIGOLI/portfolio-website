@@ -18,7 +18,7 @@ export const lightPalette = {
             }
         }
     },
-
+    background: "linear-gradient(90deg, #ff6b6b, #ebe364)"
 }
 
 export const darkPalette = {
@@ -40,5 +40,6 @@ export const darkPalette = {
                 primary: 'black !important'
             }
         }
-    }
+    },
+    background: "linear-gradient(90deg, #160808, #978383)"
 }

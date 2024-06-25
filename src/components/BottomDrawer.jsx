@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Box, makeStyles } from "@material-ui/core";
+import { Grid, Box, makeStyles, useTheme } from "@material-ui/core";
 import Drawer from "@mui/material/Drawer";
 import { CiHome } from "react-icons/ci";
 import { GoPerson } from "react-icons/go";
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     transition: "1s ease-in-out",
     height: "calc(25vh - 50px)", // Adjust height to account for the BottomNavBar
     width: "100%",
-    backgroundColor: "white",
+    // backgroundColor: "black",
     padding: "10px",
     boxSizing: "border-box",
   },
@@ -33,9 +33,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
+  contentContainer: {
+    transition: "ease-in-out",
+    height: "calc(25vh - 50px)", // Adjust height to account for the BottomNavBar
+    width: "100%",
+    padding: "10px",
+    boxSizing: "border-box",
+  },
 }));
 
 export default function BottomDrawer({ open, onClose }) {
+  const theme = useTheme();
   const classes = useStyles();
   const tabs = [
     {
@@ -87,8 +95,12 @@ export default function BottomDrawer({ open, onClose }) {
           borderTopLeftRadius: "10px",
           borderTopRightRadius: "10px",
           position: "absolute",
-          bottom: "100px",
+          bottom: "75px",
           boxShadow: "none",
+          background: theme.palette.background,
+          backdropFilter: 'blur(100px)',
+          boxShadow: `0px 0px 10px ${theme.palette.colors.text.primary} inset`,
+          color: theme.palette.colors.text.primary
         },
       }}
       BackdropProps={{
@@ -97,16 +109,7 @@ export default function BottomDrawer({ open, onClose }) {
         },
       }}
     >
-      <Grid
-        style={{
-          transition: "ease-in-out",
-          height: "calc(25vh - 50px)", // Adjust height to account for the BottomNavBar
-          width: "100%",
-          backgroundColor: "white",
-          padding: "10px",
-          boxSizing: "border-box",
-        }}
-      >
+      <Grid className={classes.contentContainer}>
         <Grid
           container
           spacing={2}

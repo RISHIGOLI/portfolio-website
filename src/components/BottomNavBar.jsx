@@ -8,11 +8,14 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 const useStyles = makeStyles((theme) => ({
   container: {
     width: "100%",
-    height: "100px",
+    height: "75px",
     position: "fixed",
     left: 0,
     bottom: 0,
     zIndex: 100,
+    color: theme.palette.colors.text.primary,
+    boxShadow: `0px 0px 10px ${theme.palette.colors.text.primary} inset`,
+    backdropFilter: 'blur(100px)',
     [theme.breakpoints.up(768)]: {
       display: "none",
     },
@@ -33,13 +36,12 @@ export default function BottomNavBar({ changeTheme, darkMode }) {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            backgroundColor: "white",
             padding: "0px 15px",
           }}
         >
-          <Box style={{ fontSize: "20px" }}>
+          <Box style={{ fontSize: "20px", display: 'flex' }}>
             Rushikesh
-            <Box style={{ cursor: "pointer" }}>
+            <Box style={{ cursor: "pointer", margin: '0px 10px' }}>
               {darkMode ? (
                 <LightModeIcon onClick={changeTheme} />
               ) : (
