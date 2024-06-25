@@ -38,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainer: {
     width: "300px",
-    border: "1px solid black",
     margin: "5px",
     borderRadius: "10px",
     backgroundColor: "antiquewhite",
