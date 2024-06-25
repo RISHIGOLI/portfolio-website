@@ -19,10 +19,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "10px",
     // display: 'contents'
   },
-  info:{
-    margin: "15px", color: "gray", textAlign: "justify",
-    color: theme.palette.colors.text.other
-  }
+  info: {
+    margin: "0px 15px",
+    color: "gray",
+    textAlign: "justify",
+    color: theme.palette.colors.text.other,
+  },
 }));
 
 export default function Information() {
@@ -90,16 +92,20 @@ export default function Information() {
 
       {/* info */}
       <Grid className={classes.info}>
-        Frontend developer, I create web pages with UI / UX user interface. I
-        have 2 years of experience and many clients are happy with the projects
-        carried out.
+        Driven Full Stack Developer with a passion for innovation and
+        problem-solving. Possessing 2 years of hands-on experience, I excel in
+        crafting robust applications using Spring Boot, Core Java, JavaScript,
+        and ReactJS. Proficient in version control using Git and Bitbucket, with
+        a knack for deploying applications on AWS hosting services. Eager to
+        leverage my skills and contribute effectively to a dynamic team while
+        continuously upgrading my capabilities
       </Grid>
 
       <Grid
         style={{
           display: "flex",
           justifyContent: "flex-start",
-          margin: "15px",
+          margin: "0px 15px",
         }}
       >
         {/* <Button style={{ ...myButton }}>Download CV</Button> */}
