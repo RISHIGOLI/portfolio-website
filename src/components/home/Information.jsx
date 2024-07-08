@@ -28,7 +28,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     color: theme.palette.colors.text.primary,
     display: 'flex',
-    justifyContent: 'center'
+    [theme.breakpoints.down(767)]:{
+      justifyContent: 'center'
+    }
   },
   button: {
     backgroundColor: theme.palette.colors.button.background.primary,
