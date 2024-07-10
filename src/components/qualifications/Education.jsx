@@ -62,7 +62,7 @@ export default function Education() {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                width: "400px",
+                width: "100%",
                 alignItems: index % 2 === 0 ? "flex-start" : "flex-end",
                 position: "relative",
               }}
@@ -75,8 +75,8 @@ export default function Education() {
                   borderRadius: "50%",
                   position: "absolute",
                   top: -5,
-                  right: index % 2 === 0 && "195px",
-                  left: index % 2 !== 0 && "195px",
+                  right: index % 2 === 0 && "calc(50% - 5px)",
+                  left: index % 2 !== 0 && "calc(50% - 5px)",
                 }}
               ></Box>
               <Grid
@@ -124,7 +124,7 @@ export default function Education() {
                         alignItems: "flex-start",
                       }}
                     >
-                      <Grid style={{ marginLeft: "30px" }}>
+                      <Grid style={{ marginLeft: "15px" }}>
                         <Box
                           style={{
                             fontSize: "18px",
