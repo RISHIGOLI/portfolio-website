@@ -26,11 +26,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     padding: "0% 13%",
     [theme.breakpoints.down(768)]: {
-      height: '100%',
-      display: 'flex',
-      justifyContent: 'center',
+      height: "100%",
+      display: "flex",
+      justifyContent: "center",
       marginTop: "0px",
-      padding: '0% 5%'
+      padding: "0% 5%",
     },
   },
   contentContainer: {
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "300px",
     [theme.breakpoints.down(768)]: {
       flexDirection: "column",
-      maxHeight: 'max-content'
+      maxHeight: "max-content",
     },
   },
   content: {
@@ -48,22 +48,36 @@ const useStyles = makeStyles((theme) => ({
     padding: "0px 25px",
     [theme.breakpoints.down(768)]: {
       width: "100%",
-      margin: '15px 0px',
-      padding: '0px'
+      margin: "15px 0px",
+      padding: "0px",
     },
   },
-  titleContainer:{
-    ...centerContent, flexDirection: "column" ,
-    [theme.breakpoints.down(768)]:{
-      margin: '15px'
-    }
+  titleContainer: {
+    ...centerContent,
+    flexDirection: "column",
+    [theme.breakpoints.down(768)]: {
+      margin: "15px",
+    },
   },
-  skills:{
-    width: "100%", flexWrap: "wrap", display: "flex",
-    [theme.breakpoints.down(768)]:{
-      justifyContent: 'flex-end'
-    }
-  }
+  skills: {
+    width: "100%",
+    flexWrap: "wrap",
+    display: "flex",
+    [theme.breakpoints.down(768)]: {
+      justifyContent: "flex-end",
+    },
+  },
+  skillsContainer: {
+    width: "40%",
+    maxWidth: "50%",
+    margin: "15px 15px",
+    justifyContent: "flex-start",
+    display: "flex",
+    [theme.breakpoints.down(505)]: {
+      width: "50%",
+      margin: "15px 0px",
+    },
+  },
 }));
 
 export default function Skills() {
@@ -141,7 +155,7 @@ export default function Skills() {
               backgroundColor: "antiquewhite",
               borderRadius: "20px",
               padding: "20px 40px",
-              boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
+              boxShadow: "10px 10px 20px 0px rgba(0, 0, 0, 0.5)",
             }}
           >
             <Box
@@ -151,15 +165,7 @@ export default function Skills() {
             </Box>
             <Grid className={classes.skills}>
               {frontendSkills.map((skill) => (
-                <Grid
-                  style={{
-                    width: "40%",
-                    maxWidth: "50%",
-                    margin: "15px 15px",
-                    justifyContent: "flex-start",
-                    display: "flex",
-                  }}
-                >
+                <Grid className={classes.skillsContainer}>
                   <Grid style={{ marginTop: "5px", marginRight: "10px" }}>
                     <MdVerified />
                   </Grid>
@@ -193,7 +199,7 @@ export default function Skills() {
               backgroundColor: "antiquewhite",
               borderRadius: "20px",
               padding: "20px 40px",
-              boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)'
+              boxShadow: "10px 10px 20px 0px rgba(0, 0, 0, 0.5)",
             }}
           >
             <Box
@@ -203,15 +209,7 @@ export default function Skills() {
             </Box>
             <Grid className={classes.skills}>
               {backendSkills.map((skill) => (
-                <Grid
-                  style={{
-                    width: "40%",
-                    maxWidth: "50%",
-                    margin: "15px 15px",
-                    justifyContent: "flex-start",
-                    display: "flex",
-                  }}
-                >
+                <Grid className={classes.skillsContainer}>
                   <Grid style={{ marginTop: "5px", marginRight: "10px" }}>
                     <MdVerified />
                   </Grid>
