@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     top: 0,
     left: 0,
-    width: "100vw",
+    width: "calc(100vw - 4px)",
     zIndex: 1000,
     [theme.breakpoints.down(768)]: {
       display: "none",

@@ -1,20 +1,21 @@
 body {
   margin: 0;
-  font-family: 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif !important;
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-* {
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: darkgray transparent; /* For Firefox */
+/* For Firefox */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: rgb(141, 17, 108) transparent; /* Scrollbar thumb color and background color */
+  }
 }
 
 /* Webkit Browsers Scrollbar Styling */
@@ -23,14 +24,15 @@ code {
 }
 
 *::-webkit-scrollbar-track {
-  background: none; /* Background of the track */
+  background: transparent; /* Background of the track */
 }
 
 *::-webkit-scrollbar-thumb {
-  background: rgb(141, 17, 108); /* Scrollbar thumb color */
+  background-color: rgb(141, 17, 108); /* Scrollbar thumb color */
   border-radius: 2px; /* Scrollbar thumb radius */
+  border: none; /* Remove any border if present */
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: rgb(141, 17, 108); /* Thumb color on hover */
+  background-color: rgb(141, 17, 108); /* Thumb color on hover */
 }

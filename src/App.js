@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: '50px',
     [theme.breakpoints.down(768)]: {
       overflow: 'auto'
-    }
+    },
   },
   container2: {
     display: 'flex', flexDirection: 'column',
