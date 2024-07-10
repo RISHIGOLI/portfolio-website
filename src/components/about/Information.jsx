@@ -7,6 +7,24 @@ import { BiSupport } from "react-icons/bi";
 import MyButton from "../MyButton";
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    padding: "0% 20%",
+    [theme.breakpoints.down(767)]: {
+      width: "inherit",
+      padding: '0%'
+    },
+  },
+  itemsContainer:{
+    display: "flex", justifyContent: "flex-start",
+    [theme.breakpoints.down(505)]:{
+      justifyContent: 'center',
+      flexWrap: 'wrap'
+    }
+  },
   icon: {
     scale: 2,
     margin: "10px",
@@ -59,17 +77,9 @@ export default function Information() {
   }
 
   return (
-    <Grid
-      style={{
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        padding: "0% 20%",
-      }}
-    >
+    <Grid className={classes.container}>
       {/* blocks */}
-      <Grid style={{ display: "flex", justifyContent: "flex-start" }}>
+      <Grid className={classes.itemsContainer}>
         {items.map((item) => (
           <Grid
             key={item.id}
