@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     minHeight: "80px",
-    borderBottom: "1px solid gray",
+    borderBottom: `1px solid ${theme.palette.colors.text.primary}`,
     position: "fixed",
     top: 0,
     left: 0,

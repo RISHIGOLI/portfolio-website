@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)',
     [theme.breakpoints.down(768)]: {
       flexDirection: "column",
+      padding: '15px 0px'
     },
   },
   photo: {
