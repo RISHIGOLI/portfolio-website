@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
     color: theme.palette.colors.text.primary,
-    backdropFilter: 'blur(60px)'
+    backdropFilter: "blur(60px)",
+    boxShadow: `0px 0px 10px ${theme.palette.colors.text.primary} inset`,
   },
 
   headerItem: {
@@ -45,9 +46,15 @@ function Header({ changeTheme, darkMode }) {
       </Grid>
 
       {/* right side tabs */}
-      <Grid style={{ display: "flex", marginRight: "25px", alignItems: 'center' }}>
+      <Grid
+        style={{ display: "flex", marginRight: "25px", alignItems: "center" }}
+      >
         <Box style={{ cursor: "pointer" }}>
-          {darkMode ? <LightModeIcon onClick={changeTheme}/> : <DarkModeIcon onClick={changeTheme}/>}
+          {darkMode ? (
+            <LightModeIcon onClick={changeTheme} />
+          ) : (
+            <DarkModeIcon onClick={changeTheme} />
+          )}
         </Box>
         <Link to="home" spy={true} smooth={true} duration={500}>
           <Box className={classes.headerItem}>Home</Box>
