@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Grid, makeStyles } from '@material-ui/core'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import Chat from './Chat';
 
 const useStyles = makeStyles((theme) => ({
     tabsContainer: {
@@ -82,8 +83,8 @@ function Chats() {
                 <Grid style={{ overflowY: 'auto', padding: '5px' }}>
                     {
                         chats.map((chat, index) => (
-                            <Grid style={{ height: '80px', width: '100%', backgroundColor: 'blue', marginBottom: '5px' }}>
-
+                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px' }}>
+                                <Chat/>
                             </Grid>
                         ))
                     }
