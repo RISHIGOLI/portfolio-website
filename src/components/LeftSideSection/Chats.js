@@ -53,11 +53,15 @@ function Chats(props) {
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-    useEffect(() => {
-        console.log('hieght of the container', gridRef.current.clientHeight);
-    }, [])
+    function handleScroll(e) {
+        const div = e.target
+        if (div.scrollTop >= (div.scrollHeight - div.clientHeight)) {
+            console.log('reached to the bottom portion')
+        }
+    }
+
     return (
-        <Grid style={{ height: 'calc(100% - 3.5rem)', display: 'flex', flexDirection: 'column' }} ref={gridRef}>
+        <Grid style={{ height: 'calc(100% - 3.5rem)', display: 'flex', flexDirection: 'column' }} >
             <Tabs
                 value={value}
                 onChange={handleChange}
@@ -82,11 +86,11 @@ function Chats(props) {
             </Tabs>
 
             <Grid style={{ width: '100%', height: 'inherit', display: 'flex', flexDirection: 'column' }}>
-                <Grid style={{ overflowY: 'auto', padding: '5px' }}>
+                <Grid style={{ overflowY: 'auto', padding: '5px' }} ref={gridRef} onScroll={(event) => handleScroll(event)}>
                     {
                         chats.map((chat, index) => (
                             <Grid style={{ height: '72px', width: '100%', marginBottom: '5px' }} key={chat.id}>
-                                <Chat chat={chat}/>
+                                <Chat chat={chat} />
                             </Grid>
                         ))
                     }

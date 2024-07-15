@@ -16,7 +16,7 @@ function LeftSideChatsSection() {
     return (
         <Grid style={{ height: '100%', width: '24rem', backgroundColor: 'white', display: 'flex', flexDirection: 'column' }}>
             <Header />
-            <Chats chats={chats}/>
+            <Chats chats={chats} />
         </Grid>
     )
 }
