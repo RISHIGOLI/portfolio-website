@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
 function Chats(props) {
     const gridRef = useRef(null)
     const dispatch = useDispatch()
+    const [chatId, setChatId] = useState(null)
     const { loading, error, success, chats, pageNumber, lastPageNumber } = useSelector((state) => state.chats)
     const classes = useStyles()
     const [value, setValue] = useState(0);
@@ -98,8 +99,8 @@ function Chats(props) {
                 <Grid style={{ overflowY: 'auto', padding: '5px' }} ref={gridRef} onScroll={(event) => handleScroll(event)}>
                     {
                         chats?.map((chat, index) => (
-                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px' }} key={chat.id}>
-                                <Chat chat={chat} />
+                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px', backgroundColor: chatId === chat.id && 'rgb(51,144,236)', borderRadius: '1rem', color: chatId === chat.id && 'white' }} key={chat.id} onClick={() => setChatId(chat.id)}>
+                                <Chat chat={chat} selected={chatId === chat.id}/>
                             </Grid>
                         ))
                     }
