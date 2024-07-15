@@ -3,6 +3,8 @@ import { Grid, makeStyles } from '@material-ui/core'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Chat from './Chat';
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchChats } from '../../store/logic/chats/ChatsSlice';
 
 const useStyles = makeStyles((theme) => ({
     tabsContainer: {
@@ -46,20 +48,27 @@ const useStyles = makeStyles((theme) => ({
 
 function Chats(props) {
     const gridRef = useRef(null)
+    const dispatch = useDispatch()
+    const { loading, error, success, chats, pageNumber, lastPageNumber } = useSelector((state) => state.chats)
     const classes = useStyles()
     const [value, setValue] = useState(0);
     const tabs = ['All', 'Equities', 'Insider Trades']
-    const chats = props.chats
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
     function handleScroll(e) {
         const div = e.target
         if (div.scrollTop >= (div.scrollHeight - div.clientHeight)) {
-            console.log('reached to the bottom portion')
+            if (pageNumber < lastPageNumber) {
+                dispatch(fetchChats({ pageNumber: pageNumber + 1 }))
+                console.log('reached to the bottom portion')
+            }
         }
     }
 
+    useEffect(() => {
+        dispatch(fetchChats({ pageNumber: 1 }))
+    }, [])
     return (
         <Grid style={{ height: 'calc(100% - 3.5rem)', display: 'flex', flexDirection: 'column' }} >
             <Tabs
@@ -88,7 +97,7 @@ function Chats(props) {
             <Grid style={{ width: '100%', height: 'inherit', display: 'flex', flexDirection: 'column' }}>
                 <Grid style={{ overflowY: 'auto', padding: '5px' }} ref={gridRef} onScroll={(event) => handleScroll(event)}>
                     {
-                        chats.map((chat, index) => (
+                        chats?.map((chat, index) => (
                             <Grid style={{ height: '72px', width: '100%', marginBottom: '5px' }} key={chat.id}>
                                 <Chat chat={chat} />
                             </Grid>
