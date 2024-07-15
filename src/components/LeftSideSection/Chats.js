@@ -57,7 +57,7 @@ function Chats() {
         console.log('hieght of the container', gridRef.current.clientHeight);
     }, [])
     return (
-        <Grid style={{ height: 'calc(100% - 72px)', display: 'flex', flexDirection: 'column' }} ref={gridRef}>
+        <Grid style={{ height: 'calc(100% - 3.5rem)', display: 'flex', flexDirection: 'column' }} ref={gridRef}>
             <Tabs
                 value={value}
                 onChange={handleChange}
