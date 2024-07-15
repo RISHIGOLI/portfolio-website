@@ -6,6 +6,7 @@ import { RiAttachment2 } from "react-icons/ri";
 import { GrMicrophone } from "react-icons/gr";
 
 function ChatWindow() {
+    const messages = Array(50).fill(1)
     return (
         <Grid style={{ height: '100%', width: '100%', backgroundColor: 'pink', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             {/* header */}
@@ -22,6 +23,19 @@ function ChatWindow() {
                 <Grid style={{ display: 'flex' }}>
                     <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoSearchOutline fontSize={'1.5rem'} color={'rgb(112,117,121)'}/></Button>
                     <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoMdMore fontSize={'1.5rem'} color={'rgb(112,117,121)'}/></Button>
+                </Grid>
+            </Grid>
+
+            {/* messages container */}
+            <Grid style={{height: 'calc(100% - 7rem)', width: '100%', backgroundColor: 'blue'}}>
+                <Grid style={{height: '100%', width: '100%', overflowY: 'auto'}}>
+                {
+                    messages.map((message,index)=>(
+                        <Grid style={{width: '100%', height: '5rem', backgroundColor: 'white', marginBottom: '5px'}}>
+
+                        </Grid>
+                    ))
+                }
                 </Grid>
             </Grid>
             {/* input container */}

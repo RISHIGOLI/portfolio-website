@@ -3,7 +3,7 @@ import ChatWindow from './ChatWindow'
 
 function RightSideMessagesSection() {
     return (
-        <Grid style={{ width: '70%', height: '100%', backgroundColor: 'red' }}>
+        <Grid style={{ width: 'calc(100% - 16rem)', height: '100%', backgroundColor: 'red' }}>
             <ChatWindow />
         </Grid>
     )

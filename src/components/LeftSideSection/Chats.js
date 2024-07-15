@@ -14,6 +14,8 @@ const useStyles = makeStyles((theme) => ({
         top: 0,
         backgroundColor: theme.palette.background.paper,
         zIndex: theme.zIndex.appBar,
+        minHeight: 'unset',
+        height: '42px',
         '& .MuiTab-root': {
             textTransform: 'none'
         },
