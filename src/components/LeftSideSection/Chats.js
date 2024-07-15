@@ -44,12 +44,12 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-function Chats() {
+function Chats(props) {
     const gridRef = useRef(null)
     const classes = useStyles()
     const [value, setValue] = useState(0);
     const tabs = ['All', 'Equities', 'Insider Trades']
-    const chats = Array(40).fill(1)
+    const chats = props.chats
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -85,8 +85,8 @@ function Chats() {
                 <Grid style={{ overflowY: 'auto', padding: '5px' }}>
                     {
                         chats.map((chat, index) => (
-                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px' }}>
-                                <Chat/>
+                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px' }} key={chat.id}>
+                                <Chat chat={chat}/>
                             </Grid>
                         ))
                     }
