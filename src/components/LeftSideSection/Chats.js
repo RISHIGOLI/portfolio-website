@@ -5,6 +5,7 @@ import Tab from '@mui/material/Tab';
 import Chat from './Chat';
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchChats } from '../../store/logic/chats/ChatsSlice';
+import { fetchMessages } from '../../store/logic/messages/MessagesSlice';
 
 const useStyles = makeStyles((theme) => ({
     tabsContainer: {
@@ -70,6 +71,12 @@ function Chats(props) {
     useEffect(() => {
         dispatch(fetchChats({ pageNumber: 1 }))
     }, [])
+
+    function handleClick(chatId){
+        setChatId(chatId)
+        dispatch(fetchMessages({chatId: chatId}))
+    }
+
     return (
         <Grid style={{ height: 'calc(100% - 3.5rem)', display: 'flex', flexDirection: 'column' }} >
             <Tabs
@@ -99,7 +106,7 @@ function Chats(props) {
                 <Grid style={{ overflowY: 'auto', padding: '5px' }} ref={gridRef} onScroll={(event) => handleScroll(event)}>
                     {
                         chats?.map((chat, index) => (
-                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px', backgroundColor: chatId === chat.id && 'rgb(51,144,236)', borderRadius: '1rem', color: chatId === chat.id && 'white' }} key={chat.id} onClick={() => setChatId(chat.id)}>
+                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px', backgroundColor: chatId === chat.id && 'rgb(51,144,236)', borderRadius: '1rem', color: chatId === chat.id && 'white' }} key={chat.id} onClick={() => handleClick(chat.id)}>
                                 <Chat chat={chat} selected={chatId === chat.id}/>
                             </Grid>
                         ))

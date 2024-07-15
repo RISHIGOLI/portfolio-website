@@ -4,13 +4,16 @@ import { IoMdMore } from "react-icons/io";
 import { BsEmojiSmile } from "react-icons/bs";
 import { RiAttachment2 } from "react-icons/ri";
 import { GrMicrophone } from "react-icons/gr";
+import { useDispatch, useSelector } from 'react-redux'
 
 function ChatWindow() {
-    const messages = Array(50).fill(1)
+    const { error, loading, messages, success } = useSelector((state) => state.messages)
+    const currentUserId = 1
+
     return (
         <Grid style={{ height: '100%', width: '100%', backgroundColor: 'pink', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             {/* header */}
-            <Grid style={{ width: 'auto', height: '3.5rem', display: 'flex', backgroundColor:'red', justifyContent: 'space-between', alignItems: 'center', padding: '4px 10px' }}>
+            <Grid style={{ width: 'auto', height: '3.5rem', display: 'flex', backgroundColor: 'red', justifyContent: 'space-between', alignItems: 'center', padding: '4px 10px' }}>
                 <Grid style={{ display: 'flex', justifyContent: 'flex-start' }}>
                     {/* avatar container */}
                     <Grid style={{ width: '2.5rem', height: '2.5rem', backgroundColor: 'blue', marginRight: '0.625rem', borderRadius: '50%' }}></Grid>
@@ -21,21 +24,28 @@ function ChatWindow() {
                     </Grid>
                 </Grid>
                 <Grid style={{ display: 'flex' }}>
-                    <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoSearchOutline fontSize={'1.5rem'} color={'rgb(112,117,121)'}/></Button>
-                    <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoMdMore fontSize={'1.5rem'} color={'rgb(112,117,121)'}/></Button>
+                    <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoSearchOutline fontSize={'1.5rem'} color={'rgb(112,117,121)'} /></Button>
+                    <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoMdMore fontSize={'1.5rem'} color={'rgb(112,117,121)'} /></Button>
                 </Grid>
             </Grid>
 
             {/* messages container */}
-            <Grid style={{height: 'calc(100% - 7rem)', width: '100%', backgroundColor: 'blue'}}>
-                <Grid style={{height: '100%', width: '100%', overflowY: 'auto'}}>
-                {
-                    messages.map((message,index)=>(
-                        <Grid style={{width: '100%', height: '5rem', backgroundColor: 'white', marginBottom: '5px'}}>
-
-                        </Grid>
-                    ))
-                }
+            <Grid style={{ height: 'calc(100% - 7rem)', width: '100%', backgroundColor: 'blue' }}>
+                <Grid style={{ height: '100%', overflowY: 'auto', paddingLeft: '10%', paddingRight: '10%' }}>
+                    {
+                        messages.map((message, index) => (
+                            <>
+                                <Grid style={{ width: 'max-content', height: 'auto', marginBottom: '5px', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', padding: '10px', backgroundColor: 'white' }}>
+                                    asdf
+                                </Grid>
+                                <Grid style={{ width: 'auto', height: 'auto', marginBottom: '5px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center', padding: '10px' }}>
+                                    <Grid style={{ width: 'max-content', display: 'flex', justifyContent: 'flex-end', backgroundColor: 'pink' }}>
+                                        asdf
+                                    </Grid>
+                                </Grid>
+                            </>
+                        ))
+                    }
                 </Grid>
             </Grid>
             {/* input container */}
