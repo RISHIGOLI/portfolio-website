@@ -16,25 +16,25 @@ code {
 @-moz-document url-prefix() {
   * {
     scrollbar-width: thin; /* Width of the scrollbar */
-    scrollbar-color: rgb(141, 17, 108) transparent; /* Scrollbar thumb color and background color */
+    scrollbar-color: darkgray; /* Scrollbar thumb color and background color */
   }
 }
 
 /* Webkit Browsers Scrollbar Styling */
 *::-webkit-scrollbar {
-  width: 4px; /* Width of the scrollbar */
+  width: 0.4rem; /* Width of the scrollbar */
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent; /* Background of the track */
+  background: lightgray; /* Background of the track */
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgb(141, 17, 108); /* Scrollbar thumb color */
-  border-radius: 2px; /* Scrollbar thumb radius */
+  background-color: darkgray; /* Scrollbar thumb color */
+  border-radius: 0px; /* Scrollbar thumb radius */
   border: none; /* Remove any border if present */
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(141, 17, 108); /* Thumb color on hover */
+  background-color: darkgray; /* Thumb color on hover */
 }
