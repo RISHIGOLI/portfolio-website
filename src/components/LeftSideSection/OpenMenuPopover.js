@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         width: '225px !important',
         height: 'max-content !important',
         // opacity: '0.8 !important',
-        background: 'rgb(255,255,255,0.733) !important',
+        background: 'rgb(255,255,255,0.533) !important',
         backdropFilter: 'blur(10px)',
         minWidth: '17rem !important',
         maxHeight: 'calc(100 * 6.41px - 3.75rem)',
