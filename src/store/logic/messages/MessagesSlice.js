@@ -42,7 +42,7 @@ export const fetchMessages = createAsyncThunk(
         try {
             console.log('chat id to be fetched =', chatId);
             const response = await fetchMessagesByChat(chatId)
-            console.log('messages = ', response.data.data);
+            console.log('messages = ', response.data);
             return response.data
         } catch (error) {
             return thunkAPI.rejectWithValue({ message: 300 })
