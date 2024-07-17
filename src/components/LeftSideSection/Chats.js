@@ -51,8 +51,15 @@ function Chats(props) {
     const gridRef = useRef(null)
     const dispatch = useDispatch()
     const [chatId, setChatId] = useState(null)
-    const { loading, error, success, chats, pageNumber, lastPageNumber } = useSelector((state) => state.chats)
+    const { loading, error, success, pageNumber, lastPageNumber } = useSelector((state) => state.chats)
     const classes = useStyles()
+    const chat = {
+        creator: {
+            name: 'Nobel CHAT',
+            phone: '12332235234'
+        }
+    }
+    const chats = Array(20).fill(chat)
     const [value, setValue] = useState(0);
     const tabs = ['All', 'Equities', 'Insider Trades']
     const handleChange = (event, newValue) => {
@@ -106,8 +113,8 @@ function Chats(props) {
                 <Grid style={{ overflowY: 'auto', padding: '5px' }} ref={gridRef} onScroll={(event) => handleScroll(event)}>
                     {
                         chats?.map((chat, index) => (
-                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px', backgroundColor: chatId === chat.id && 'rgb(51,144,236)', borderRadius: '1rem', color: chatId === chat.id && 'white' }} key={chat.id} onClick={() => handleClick(chat.id)}>
-                                <Chat chat={chat} selected={chatId === chat.id}/>
+                            <Grid style={{ height: '72px', width: '100%', marginBottom: '5px', backgroundColor: chatId === index && 'rgb(51,144,236)', borderRadius: '1rem', color: chatId === chat.id && 'white' }} key={chat.id} onClick={() => handleClick(index)}>
+                                <Chat chat={chat} selected={chatId === index}/>
                             </Grid>
                         ))
                     }
