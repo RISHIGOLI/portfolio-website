@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Grid, Box, Button } from '@material-ui/core'
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdMore } from "react-icons/io";
@@ -5,9 +6,11 @@ import { BsEmojiSmile } from "react-icons/bs";
 import { RiAttachment2 } from "react-icons/ri";
 import { GrMicrophone } from "react-icons/gr";
 import { useDispatch, useSelector } from 'react-redux'
+import MoreActionsPopover from './MoreActionsPopover';
 
 function ChatWindow() {
     const { error, loading, messages, success } = useSelector((state) => state.messages)
+    const [openMoreActionsPopover, setOpenMoreActionPopover] = useState(false)
     const currentUserId = 1
 
     return (
@@ -25,7 +28,7 @@ function ChatWindow() {
                 </Grid>
                 <Grid style={{ display: 'flex' }}>
                     <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoSearchOutline fontSize={'1.5rem'} color={'rgb(112,117,121)'} /></Button>
-                    <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }}><IoMdMore fontSize={'1.5rem'} color={'rgb(112,117,121)'} /></Button>
+                    <Button style={{ height: '2.5rem', width: '2.5rem', borderRadius: '50%', minWidth: 'auto' }} onClick={() => setOpenMoreActionPopover(true)}><IoMdMore fontSize={'1.5rem'} color={'rgb(112,117,121)'} /></Button>
                 </Grid>
             </Grid>
 
@@ -77,6 +80,9 @@ function ChatWindow() {
                     </Grid>
                 </Grid>
             </Grid>
+            {
+                openMoreActionsPopover && <MoreActionsPopover open={openMoreActionsPopover} onClose={()=>setOpenMoreActionPopover(false)}/>
+            }
         </Grid>
     )
 }
