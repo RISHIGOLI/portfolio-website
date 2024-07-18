@@ -14,9 +14,9 @@ function ChatWindow() {
     const currentUserId = 1
 
     return (
-        <Grid style={{ height: '100%', width: '100%', backgroundColor: 'pink', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <Grid style={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             {/* header */}
-            <Grid style={{ width: 'auto', height: '3.5rem', display: 'flex', backgroundColor: 'white', justifyContent: 'space-between', alignItems: 'center', padding: '4px 10px' }}>
+            <Grid style={{ width: 'auto', height: '3.5rem', display: 'flex', backgroundColor: 'white', justifyContent: 'space-between', alignItems: 'center', padding: '4px 10px', boxShadow: '1px 1px 2px lightgray', zIndex: 1 }}>
                 <Grid style={{ display: 'flex', justifyContent: 'flex-start' }}>
                     {/* avatar container */}
                     <Grid style={{ width: '2.5rem', height: '2.5rem', backgroundColor: 'blue', marginRight: '0.625rem', borderRadius: '50%' }}></Grid>
@@ -33,8 +33,8 @@ function ChatWindow() {
             </Grid>
 
             {/* messages container */}
-            <Grid style={{ height: 'calc(100% - 7rem)', width: '100%', backgroundColor: 'blue' }}>
-                <Grid style={{ height: '100%', overflowY: 'auto', paddingLeft: '10%', paddingRight: '10%' }}>
+            <Grid style={{ height: 'calc(100% - 7rem)', width: '100%' }}>
+                <Grid style={{ height: '100%', overflowY: 'auto', paddingLeft: '10%', paddingRight: '10%', backgroundColor: 'darkgray' }}>
                     {
                         messages.map((message, index) => (
                             <>
@@ -59,7 +59,7 @@ function ChatWindow() {
                 </Grid>
             </Grid>
             {/* input container */}
-            <Grid style={{ width: 'calc(100% - 20vw)', height: '3.5rem', marginBottom: '1.25rem', width: '100%', backgroundColor: 'blue', display: 'flex', justifyContent: 'center', position: 'relative', bottom: '1rem' }}>
+            <Grid style={{ width: 'calc(100% - 20vw)', height: '3.5rem', marginBottom: '1.25rem', width: '100%', display: 'flex', justifyContent: 'center', position: 'relative', bottom: '1rem' }}>
                 <Grid style={{ marginLeft: 'auto', marginRight: 'auto', height: '100%', width: '75%', display: 'flex' }}>
                     <Grid style={{ width: 'calc(100% - 5rem)', height: '100%', display: 'flex', justifyContent: 'space-between', marginLeft: '1rem', backgroundColor: 'rgb(33,33,33)', borderRadius: '0.93752rem', color: 'rgb(170,170,170,0.8)' }}>
                         {/* emoji */}

@@ -3,7 +3,7 @@ import ChatWindow from './ChatWindow'
 
 const useStyles = makeStyles((theme) => ({
     rightSideMessagesSection: {
-        width: 'calc(100% - 16rem)', height: '100%', backgroundColor: 'red',
+        width: 'calc(100% - 16rem)', height: '100%',
         [theme.breakpoints.down(767)]: {
             display: 'none'
         }
