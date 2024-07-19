@@ -51,7 +51,7 @@ function Chats(props) {
     const gridRef = useRef(null)
     const dispatch = useDispatch()
     const [chatId, setChatId] = useState(null)
-    const { loading, error, success, pageNumber, lastPageNumber, chats } = useSelector((state) => state.chats)
+    const { loading, error, success, pageNumber, lastPageNumber } = useSelector((state) => state.chats)
     const classes = useStyles()
     const chat = {
         creator: {
@@ -59,7 +59,7 @@ function Chats(props) {
             phone: '12332235234'
         }
     }
-    // const chats = Array(20).fill(chat)
+    const chats = Array(20).fill(chat)
     const [value, setValue] = useState(0);
     const tabs = ['All', 'Equities', 'Insider Trades']
     const handleChange = (event, newValue) => {
