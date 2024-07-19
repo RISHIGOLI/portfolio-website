@@ -2,7 +2,6 @@ import { useRef } from 'react';
 import { makeStyles, Grid } from '@material-ui/core'
 import LeftSideChatsSection from '../components/LeftSideSection/LeftSideChatsSection';
 import RightSideMessagesSection from '../components/RightSection/RightSideMessagesSection';
-import './Layout.css'
 
 const useStyles = makeStyles((theme) => ({
     container: {
