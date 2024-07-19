@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         padding: '.25rem',
         paddingInlineEnd: '.75rem',
         borderRadius: '.375rem',
+        paddingTop: '0.5rem',
         width: 'auto',
         fontWeight: 500,
         transform: 'scale(1)',

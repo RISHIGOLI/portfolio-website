@@ -77,7 +77,7 @@ function ChatWindow() {
                         </Grid>
                         {/* input */}
                         <Grid style={{ height: '100%', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                            <input type="text" placeholder='Message' style={{ height: '50%', background: 'none', border: 'none', width: '100%' }} />
+                            <input type="text" placeholder='Message' style={{ height: '50%', background: 'none', border: 'none', width: '100%', outline: 'none', color: 'white' }} />
                         </Grid>
                         {/* attach files  */}
                         <Grid style={{ height: '100%', width: '10%', marginLeft: '0.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
