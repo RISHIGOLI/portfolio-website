@@ -85,7 +85,7 @@ function Chats(props) {
     }
 
     return (
-        <Grid style={{ height: 'calc(100% - 3.5rem)', display: 'flex', flexDirection: 'column' }} >
+        <Grid style={{ height: 'calc(100% - 3.5rem)', display: 'flex', flexDirection: 'column', width: '100%' }} >
             <Tabs
                 value={value}
                 onChange={handleChange}

@@ -6,7 +6,7 @@ import Header from './Header'
 
 const useStyles = makeStyles((theme) => ({
     leftSideChatsSectionContainer: {
-        height: '100%', width: '24rem', backgroundColor: 'white', display: 'flex', flexDirection: 'column', borderRight: '1px solid lightgray', position: 'relative',
+        height: '100%', width: 'auto', backgroundColor: 'white', display: 'flex', flexDirection: 'column', borderRight: '1px solid lightgray', position: 'relative',
         [theme.breakpoints.down(767)]: {
             width: '100vw'
         }
