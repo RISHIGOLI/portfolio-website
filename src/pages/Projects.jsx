@@ -123,7 +123,7 @@ export default function Contact() {
               >
                 {project.projectTitle}
               </Box>
-              <Grid style={{ height: "60%", border: "1px solid black" }}>
+              <Grid style={{ height: "60%", border: "1px solid black", minHeight: '168px', minWidth: '290px' }}>
                 <img
                   src={project.src}
                   alt=""
