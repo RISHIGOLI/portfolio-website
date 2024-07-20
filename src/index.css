@@ -20,7 +20,7 @@ code {
 
 /* Webkit Browsers Scrollbar Styling */
 *::-webkit-scrollbar {
-  width: 4px; /* Width of the scrollbar */
+  width: 8px; /* Width of the scrollbar */
 }
 
 *::-webkit-scrollbar-track {
@@ -29,7 +29,7 @@ code {
 
 *::-webkit-scrollbar-thumb {
   background-color: rgb(141, 17, 108); /* Scrollbar thumb color */
-  border-radius: 2px; /* Scrollbar thumb radius */
+  border-radius: 4px; /* Scrollbar thumb radius */
   border: none; /* Remove any border if present */
 }
 

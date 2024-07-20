@@ -5,6 +5,7 @@ import Education from "../components/qualifications/Education";
 import Experience from "../components/qualifications/Experience";
 import MyButton from "../components/MyButton";
 import project1 from "../Assets/project1.jpg";
+import project2 from "../Assets/project2.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -14,11 +15,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     display: "flex",
     padding: "0% 13%",
-    [theme.breakpoints.down(768)]:{
-      marginTop: '0px',
-      padding: '0% 5%',
-      justifyContent: 'center'
-    }
+    [theme.breakpoints.down(768)]: {
+      marginTop: "0px",
+      padding: "0% 5%",
+      justifyContent: "center",
+    },
   },
   title: {
     fontWeight: "bold",
@@ -28,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "0px",
     ...centerContent,
     color: theme.palette.colors.text.primary,
-    [theme.breakpoints.down(768)]:{
-      margin: '0px',
-      marginTop: '0px'
-    }
+    [theme.breakpoints.down(768)]: {
+      margin: "0px",
+      marginTop: "0px",
+    },
   },
   subtitle: {
     color: theme.palette.colors.text.other,
@@ -41,21 +42,24 @@ const useStyles = makeStyles((theme) => ({
     margin: "5px",
     borderRadius: "10px",
     backgroundColor: "antiquewhite",
-    boxShadow: '10px 10px 20px 0px rgba(0, 0, 0, 0.5)',
-    [theme.breakpoints.down(768)]:{
-      height: 'max-content',
-      width: '100%'
-    }
+    boxShadow: "10px 10px 20px 0px rgba(0, 0, 0, 0.5)",
+    [theme.breakpoints.down(768)]: {
+      height: "max-content",
+      width: "100%",
+    },
   },
-  buttonsContainer:{
-    display: "flex", justifyContent: "space-between", padding: '0px 5px'
+  buttonsContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "0px 5px",
   },
-  titleContainer:{
-    ...centerContent, flexDirection: "column",
-    [theme.breakpoints.down(768)]:{
-      margin: '15px'
-    }
-  }
+  titleContainer: {
+    ...centerContent,
+    flexDirection: "column",
+    [theme.breakpoints.down(768)]: {
+      margin: "15px",
+    },
+  },
 }));
 
 export default function Contact() {
@@ -66,6 +70,15 @@ export default function Contact() {
       projectTitle: "Travel Website UI",
       projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
       projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
+      src: project1
+    },
+    {
+      id: 2,
+      projectTitle: "Telegram UI",
+      projectGithubLink:
+        "https://github.com/RISHIGOLI/beyondchats_task_telegram_clone.git",
+      projectDemoLink: "https://beyondchats-task-telegram-clone.vercel.app/",
+      src: project2
     },
   ];
 
@@ -112,7 +125,7 @@ export default function Contact() {
               </Box>
               <Grid style={{ height: "60%", border: "1px solid black" }}>
                 <img
-                  src={project1}
+                  src={project.src}
                   alt=""
                   style={{ height: "100%", width: "100%", objectFit: "cover" }}
                 />
@@ -120,11 +133,11 @@ export default function Contact() {
               <Grid className={classes.buttonsContainer}>
                 <MyButton
                   text="Github Link"
-                  onClick={()=>handleClick(project.projectGithubLink)}
+                  onClick={() => handleClick(project.projectGithubLink)}
                 />
                 <MyButton
                   text="Live Demo"
-                  onClick={()=>handleClick(project.projectDemoLink)}
+                  onClick={() => handleClick(project.projectDemoLink)}
                 />
               </Grid>
             </Grid>
