@@ -102,7 +102,7 @@ export default function Information() {
 
       {/* info */}
       <Grid className={classes.info}>
-        Driven Full Stack Developer with a passion for innovation and
+        Driven Software Developer with a passion for innovation and
         problem-solving. Possessing 2 years of hands-on experience, I excel in
         crafting robust applications using Spring Boot, Core Java, JavaScript,
         and ReactJS. Proficient in version control using Git and Bitbucket, with

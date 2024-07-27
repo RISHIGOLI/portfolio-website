@@ -50,9 +50,9 @@ function Information() {
   return (
     <Grid className={classes.mainContainer}>
       <Box className={classes.name}>Rushikesh Goli</Box>
-      <Box className={classes.designation}>Full Stack Developer</Box>
+      <Box className={classes.designation}>Software Developer</Box>
       <Box className={classes.information}>
-        I am a versatile Full Stack Developer with extensive experience in
+        I am a versatile Software Developer with extensive experience in
         building robust web applications and backend services. My journey in the
         tech industry has equipped me with a deep understanding of both frontend
         and backend technologies, enabling me to deliver end-to-end solutions
