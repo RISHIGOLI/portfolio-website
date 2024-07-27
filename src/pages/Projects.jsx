@@ -99,7 +99,7 @@ export default function Contact() {
     <Grid id="projects" className={classes.mainContainer}>
       {/* title */}
       <Grid className={classes.titleContainer}>
-        <Box className={classes.title}>Projects</Box>
+        <Box className={classes.title}>Personal Projects</Box>
         <Box className={classes.subtitle}>Browse My Recents</Box>
       </Grid>
 
