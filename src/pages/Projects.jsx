@@ -6,6 +6,7 @@ import Experience from "../components/qualifications/Experience";
 import MyButton from "../components/MyButton";
 import project1 from "../Assets/project1.jpg";
 import project2 from "../Assets/project2.jpg";
+import project3 from "../Assets/project3.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -70,7 +71,7 @@ export default function Contact() {
       projectTitle: "Travel Website UI",
       projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
       projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
-      src: project1
+      src: project1,
     },
     {
       id: 2,
@@ -78,7 +79,15 @@ export default function Contact() {
       projectGithubLink:
         "https://github.com/RISHIGOLI/beyondchats_task_telegram_clone.git",
       projectDemoLink: "https://beyondchats-task-telegram-clone.vercel.app/",
-      src: project2
+      src: project2,
+    },
+    {
+      id: 3,
+      projectTitle: "Tailor Management System",
+      projectGithubLink:
+        "https://github.com/RISHIGOLI/tailor_management_system.git",
+      projectDemoLink: "https://tailor-management-system-hazel.vercel.app/",
+      src: project3,
     },
   ];
 
@@ -123,7 +132,14 @@ export default function Contact() {
               >
                 {project.projectTitle}
               </Box>
-              <Grid style={{ height: "60%", border: "1px solid black", minHeight: '168px', minWidth: '290px' }}>
+              <Grid
+                style={{
+                  height: "60%",
+                  border: "1px solid black",
+                  minHeight: "168px",
+                  minWidth: "290px",
+                }}
+              >
                 <img
                   src={project.src}
                   alt=""
