@@ -7,6 +7,8 @@ import MyButton from "../components/MyButton";
 import project1 from "../Assets/project1.jpg";
 import project2 from "../Assets/project2.jpg";
 import project3 from "../Assets/project3.jpg";
+import duniyaa_webapp from "../Assets/duniyaa_webapp.jpg";
+import duniyaa_admin_dashboard from '../Assets/duniyaa_admin_dashboard.jpg'
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -52,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   buttonsContainer: {
     display: "flex",
     justifyContent: "space-between",
-    padding: "0px 5px",
+    padding: "0px 5px"
   },
   titleContainer: {
     ...centerContent,
@@ -67,14 +69,28 @@ export default function Contact() {
   const classes = useStyles();
   const projects = [
     {
-      id: 1,
+      id: 0,
+      projectTitle: "Duniyaa Web App",
+      projectGithubLink: "",
+      projectDemoLink: "https://www.duniyaa.org/placeDetails/duniyaa_officials",
+      src: duniyaa_webapp,
+    },
+    {
+      id:1,
+      projectTitle: 'Duniyaa Admin Dashboard',
+      projectGithubLink: '',
+      projectDemoLink: 'https://dashboard.duniyaa.org//',
+      src: duniyaa_admin_dashboard
+    },
+    {
+      id: 2,
       projectTitle: "Travel Website UI",
       projectGithubLink: "https://github.com/RISHIGOLI/travel_website_ui.git",
       projectDemoLink: "https://travel-website-ui-mu.vercel.app/",
       src: project1,
     },
     {
-      id: 2,
+      id: 3,
       projectTitle: "Telegram UI",
       projectGithubLink:
         "https://github.com/RISHIGOLI/beyondchats_task_telegram_clone.git",
@@ -82,7 +98,7 @@ export default function Contact() {
       src: project2,
     },
     {
-      id: 3,
+      id: 4,
       projectTitle: "Tailor Management System",
       projectGithubLink:
         "https://github.com/RISHIGOLI/tailor_management_system.git",
@@ -147,14 +163,18 @@ export default function Contact() {
                 />
               </Grid>
               <Grid className={classes.buttonsContainer}>
-                <MyButton
-                  text="Github Link"
-                  onClick={() => handleClick(project.projectGithubLink)}
-                />
-                <MyButton
-                  text="Live Demo"
-                  onClick={() => handleClick(project.projectDemoLink)}
-                />
+                {project.projectGithubLink && (
+                  <MyButton
+                    text="Github Link"
+                    onClick={() => handleClick(project.projectGithubLink)}
+                  />
+                )}
+                {project.projectDemoLink && (
+                  <MyButton
+                    text="Live Demo"
+                    onClick={() => handleClick(project.projectDemoLink)}
+                  />
+                )}
               </Grid>
             </Grid>
           </Grid>

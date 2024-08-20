@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true)
+  const [isDarkMode, setIsDarkMode] = useState(false)
   const classes = useStyles({ isDarkMode })
   function handleChangeTheme() {
     setIsDarkMode(!isDarkMode)
