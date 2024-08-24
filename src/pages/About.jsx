@@ -2,6 +2,7 @@ import { Grid, Box, makeStyles } from "@material-ui/core";
 import Information from "../components/about/Information";
 import Photo from "../components/about/Photo";
 import { centerContent } from "../styles/DynamicStyles";
+import profile_pic from '../Assets/profile_pic.jpg'
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -92,7 +93,7 @@ function About() {
             }}
           >
             <img
-              src="https://media.licdn.com/dms/image/D4E03AQGcfVctQDmJ5A/profile-displayphoto-shrink_800_800/0/1709134936921?e=1724284800&v=beta&t=NJTjcgOK7fsSXpU5pd0RsUm5N-JLrsp05jRPYFQW8pk"
+              src={profile_pic}
               alt=""
               style={{
                 height: "100%",
